@@ -147,6 +147,7 @@ public class Usuarios extends AppCompatActivity {
                 SharedPreferences.Editor editor = preferencias.edit();
                 editor.putString(getResources().getString(R.string.clave_active_user_shared), getResources().getString(R.string.default_user));
                 editor.apply();
+                escribeMsg(getResources().getString(R.string.usuarios_cerrar_mensaje));
                 Intent intent = new Intent(this, MainActivity.class);
                 startActivity(intent);
                 finishAffinity();

@@ -12,6 +12,7 @@ import com.example.entregable3.R;
 import java.util.List;
 
 /**
+ * Clase adaptadora para el recyclerview
  * Created by Carlex on 11/12/2017.
  */
 
@@ -26,6 +27,16 @@ public class AdaptadorCartas extends RecyclerView.Adapter<AdaptadorCartas.ViewHo
         this.listaCartas = listaCarta;
     }
 
+    /**
+     * Metodo que inicializa los viewholders.
+     * Osea, el layout que va a mostrar para cada carta
+     * <p>
+     * Un layout maestro, diferentes imagenes mostradas
+     *
+     * @param parent   La vista donde va a ponerlo
+     * @param viewType
+     * @return El viewholder montado ya
+     */
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = inflador.inflate(R.layout.selector_elemento, null);
@@ -33,6 +44,13 @@ public class AdaptadorCartas extends RecyclerView.Adapter<AdaptadorCartas.ViewHo
         return new ViewHolder(v);
     }
 
+    /**
+     * Aqui el reciclerview llama a este metodo para mostrar
+     * cada viewholder en la posicion especificada
+     *
+     * @param holder
+     * @param position
+     */
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         Carta c = listaCartas.get(position);
@@ -47,12 +65,19 @@ public class AdaptadorCartas extends RecyclerView.Adapter<AdaptadorCartas.ViewHo
         return listaCartas.size();
     }
 
+    /**
+     * Setear un clicklistener para cada viewholder
+     * @param onClickListener
+     */
     void setOnClickListener(View.OnClickListener onClickListener) {
         this.onClickListener = onClickListener;
     }
 
+    /**
+     * Constructor del viewholder con los datos que va a mostrar,
+     * en este caso solo la imagen
+     */
     static class ViewHolder extends RecyclerView.ViewHolder {
-
         final ImageView imagen;
 
         ViewHolder(View itemView) {

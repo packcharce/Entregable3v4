@@ -39,11 +39,17 @@
     <!--  Expositor Cartas  -->
     <string name="expositor_titulo_intent">Expositor de Cartas</string>
     <string name="expositor_descrip_carta">Imagen previa de carta</string>
-    <string name="expositor_mostrador_monedas">Te quedan %1$d monedas.</string>
+    <!-- <string name="expositor_mostrador_monedas">Te quedan %1$d monedas.</string> -->
+    <plurals name="expositor_mostrador_monedas">
+        <item quantity="one">Te quedan %1$d moneda.</item>
+        <item quantity="other">Te quedan %1$d monedas.</item>
+    </plurals>
 
     <!--  Detalles Cartas  -->
     <string name="detalles_titulo_intent">Detalle de Carta</string>
     <string name="detalles_error_yaComprada">No mony fo bitches</string>
+    <string name="detalles_botonAvanzar">Avanzar</string>
+    <string name="detalles_botonRetro">Retroceder</string>
 
 
     <!--  Nombres Clave  -->

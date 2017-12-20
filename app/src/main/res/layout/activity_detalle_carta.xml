@@ -27,7 +27,7 @@
         android:layout_alignEnd="@+id/imagenDetalle"
         android:layout_below="@+id/imagenDetalle"
         android:layout_marginTop="25dp"
-        android:text="Avanzar" />
+        android:text="@string/detalles_botonAvanzar" />
 
     <Button
         android:id="@+id/botonDetalleRetroceder"
@@ -36,7 +36,7 @@
         android:layout_alignBaseline="@+id/botonDetalle"
         android:layout_alignBottom="@+id/botonDetalle"
         android:layout_alignStart="@+id/imagenDetalle"
-        android:text="Retroceder" />
+        android:text="@string/detalles_botonRetro" />
 
 
 </RelativeLayout>

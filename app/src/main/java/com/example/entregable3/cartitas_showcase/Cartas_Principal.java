@@ -35,13 +35,16 @@ public class Cartas_Principal extends AppCompatActivity {
 
         mostrMon = findViewById(R.id.mostradorMonedas);
 
-        mostrMon.setText(String.format(getResources().getString(R.string.expositor_mostrador_monedas), aux.mostrarmonedas()));
+        mostrMon.setText(String.format(getResources().getQuantityString(R.plurals.expositor_mostrador_monedas, aux.mostrarmonedas()), aux.mostrarmonedas()));
         adc = new AdaptadorCartas(this, aux.getListaCarta());
         rv = findViewById(R.id.recyclerView);
         rv.setAdapter(adc);
         RecyclerView.LayoutManager lm = new GridLayoutManager(this, 2);
         rv.setLayoutManager(lm);
 
+        /**
+         * Aqui se llama a los detalles de cada carta
+         */
         adc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -53,6 +56,10 @@ public class Cartas_Principal extends AppCompatActivity {
         });
     }
 
+    /**
+     * Cargar los datos del jugador, para representar el recyclerview
+     * respecto a la lista personal de cada jugador
+     */
     private void cargaDatos() {
         SharedPreferences preferencias = getSharedPreferences(getResources().getString(R.string.clave_nombre_user_shared), Context.MODE_PRIVATE);
         String nombre = preferencias.getString(getResources().getString(R.string.clave_active_user_shared), null);
@@ -68,6 +75,11 @@ public class Cartas_Principal extends AppCompatActivity {
         }
     }
 
+    /**
+     * Metodo que captura la pulsacion
+     * del boton back del dispositivo
+     * y cierra la activity sin que pete
+     */
     @Override
     public void onBackPressed() {
         NavUtils.navigateUpFromSameTask(this);

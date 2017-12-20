@@ -22,7 +22,9 @@ import java.io.ObjectInputStream;
 import static android.widget.Toast.LENGTH_LONG;
 import static android.widget.Toast.makeText;
 
-
+/**
+ * Clase principal que muestra el usuario logueado y el menu
+ */
 public class MainActivity extends AppCompatActivity {
 
     String usuario_activo;
@@ -89,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void Salir(View view) {
+
         //Salimos y borramos el sharedpreferences del usuario activo, al iniciar la app otra vez volvera a salir por defecto invitado
         SharedPreferences preferencias = getSharedPreferences(getResources().getString(R.string.clave_nombre_user_shared), Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = preferencias.edit();
@@ -98,6 +101,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Ventanita de confirmacion para salir
+     */
     private void ventanaSalir() {
         Resources res = getResources();
         AlertDialog ventana;

@@ -32,6 +32,12 @@ public class Carta implements Serializable {
         bloqueada = desbloquear;
     }
 
+    /**
+     * Metodo que muestra la carta oculta
+     * o desbloqueada respectivamente
+     *
+     * @return El recurso de la imagen oculta/descubierta
+     */
     public int getRecursoImagen() {
         int res;
         if (isBloqueada())
