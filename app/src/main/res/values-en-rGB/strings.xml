@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Cachoping APP</string>
+    <string name="titulo_menu">Cachoping APP</string>
+    <string name="menu_usuario">Users</string>
+    <string name="menu_jugar">Play</string>
+    <string name="menu_cartas">Cards</string>
+    <string name="menu_salir">Quit</string>
+    <string name="menu_user_logeado">User: %1$s</string>
+    <string name="menu_monedas">Coins: %1$d</string>
+    <string name="menu_alert_titulo">Quit this awesome game</string>
+    <string name="menu_alert_msg">Are you sure?</string>
+    <string name="menu_alert_opcNo">DON\'T leave</string>
+    <string name="menu_alert_opcSi">Quit</string>
+    <string name="usuarios_titulo">Enter your user</string>
+    <string name="usuarios_nombre_user">Username</string>
+    <string name="usuarios_guardar">Save</string>
+    <string name="usuarios_cargar">Load</string>
+    <string name="usuarios_borrar">Delete</string>
+    <string name="expositor_descrip_carta">Card preview</string>
+    <string name="usuarios_titulo_intent">User Menu</string>
+    <string name="expositor_titulo_intent">Cards showcase</string>
+    <string name="detalles_titulo_intent">Card Details</string>
+    <string name="cartas_titulo_intent">Game</string>
+    <string name="alert_no_logeado">No user logged in</string>
+    <string name="usuarios_borrado">User: %1$s has been deleted</string>
+    <string name="usuarios_no_existe">No such user</string>
+    <string name="usuarios_nuevo">New user saved: %1$s</string>
+    <string name="usuarios_nombre_invalido">Invalid username</string>
+    <string name="usuarios_nombre_repe">Existent username, choose another</string>
+    <string name="default_user">Guest</string>
+    <string name="usuarios_cerrar">Logout</string>
+    <string name="usuarios_error_text_vacio">Error, no username entered</string>
+    <string name="expositor_mostrador_monedas">You have %1$d coins</string>
+</resources>

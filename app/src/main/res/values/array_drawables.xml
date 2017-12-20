@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="lista_imagenes">
+
+        <item>@drawable/abiertoalamanecer</item>
+        <item>@drawable/acdc</item>
+        <item>@drawable/agarralascomopuedas</item>
+        <item>@drawable/assassins</item>
+        <item>@drawable/babe</item>
+        <item>@drawable/bananamecanica</item>
+        <item>@drawable/borrachocho</item>
+        <item>@drawable/caballo</item>
+        <item>@drawable/casquetvolador</item>
+        <item>@drawable/daniel</item>
+        <item>@drawable/davidteta</item>
+
+        <item>@drawable/durodemamar</item>
+        <item>@drawable/et</item>
+        <item>@drawable/famosaviciosa</item>
+        <item>@drawable/fuckbill</item>
+        <item>@drawable/fumando</item>
+        <item>@drawable/helado</item>
+        <item>@drawable/homerun</item>
+        <item>@drawable/hotdog</item>
+        <item>@drawable/hotshocks</item>
+        <item>@drawable/icesex</item>
+
+        <item>@drawable/kingcobra</item>
+        <item>@drawable/laestaca</item>
+        <item>@drawable/leche</item>
+        <item>@drawable/lindominino</item>
+        <item>@drawable/mamacomopuedas</item>
+        <item>@drawable/nelson</item>
+        <item>@drawable/nomemordais</item>
+        <item>@drawable/oktoberfest</item>
+        <item>@drawable/palmera</item>
+        <item>@drawable/pollahontas</item>
+        <item>@drawable/putalobill</item>
+
+        <item>@drawable/queviciada</item>
+        <item>@drawable/ricatetona</item>
+        <item>@drawable/solodeviolin</item>
+        <item>@drawable/soloencasa</item>
+        <item>@drawable/sperman</item>
+        <item>@drawable/tomaladoblada</item>
+        <item>@drawable/vikings</item>
+
+    </integer-array>
+
+</resources>

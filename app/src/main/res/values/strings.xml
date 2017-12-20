@@ -1,0 +1,54 @@
+<resources>
+
+    <!-- Menu -->
+    <string name="app_name">Cachopo APP</string>
+    <string name="titulo_menu">Cachopo App</string>
+    <string name="menu_usuario">Usuarios</string>
+    <string name="menu_jugar">Jugar</string>
+    <string name="menu_cartas">Cartas</string>
+    <string name="menu_salir">Salir</string>
+    <string name="menu_user_logeado">Usuario: %1$s</string>
+    <string name="menu_monedas">Monedas: %1$d</string>
+    <string name="alert_no_logeado">Ningun usuario logueado</string>
+
+    <!--  Menu Alert Salida -->
+    <string name="menu_alert_titulo">Salir del JUEGAZO</string>
+    <string name="menu_alert_msg">¿Estas seguro que quieres salir?</string>
+    <string name="menu_alert_opcNo">NO Salir</string>
+    <string name="menu_alert_opcSi">Salir</string>
+
+    <!--  Usuarios  -->
+    <string name="usuarios_titulo_intent">Menu Usuarios</string>
+    <string name="usuarios_titulo">Introduce tu usuario</string>
+    <string name="usuarios_nombre_user">Nombre de usuario</string>
+    <string name="usuarios_guardar">Crear Usuario </string>
+    <string name="usuarios_cargar">Iniciar Sesion</string>
+    <string name="usuarios_borrar">Borrar Usuario</string>
+    <string name="usuarios_cerrar">Cerrar Sesion</string>
+    <string name="usuarios_borrado">Usuario: %1$s ha sido eliminado</string>
+    <string name="usuarios_no_existe">No existe ese usuario</string>
+    <string name="usuarios_nuevo">Nuevo usuario guardado: %1$s</string>
+    <string name="usuarios_nombre_invalido">Nombre invalido.</string>
+    <string name="usuarios_nombre_repe">Nombre ya existente, elija otro.</string>
+    <string name="usuarios_error_text_vacio">Error, ningun nombre introducido.</string>
+    <string name="usuarios_cerrar_mensaje">Has cerrado sesión</string>
+
+    <!--  Cartas  -->
+    <string name="cartas_titulo_intent">Juego</string>
+
+    <!--  Expositor Cartas  -->
+    <string name="expositor_titulo_intent">Expositor de Cartas</string>
+    <string name="expositor_descrip_carta">Imagen previa de carta</string>
+    <string name="expositor_mostrador_monedas">Te quedan %1$d monedas.</string>
+
+    <!--  Detalles Cartas  -->
+    <string name="detalles_titulo_intent">Detalle de Carta</string>
+
+
+    <!--  Nombres Clave  -->
+    <string name="clave_nombre_user_shared" translatable="false">Active_user</string>
+    <string name="clave_active_user_shared" translatable="false">name</string>
+    <string name="menu_objToCartas" translatable="false">obj_jugador</string>
+    <string name="default_user">Invitado</string>
+
+</resources>

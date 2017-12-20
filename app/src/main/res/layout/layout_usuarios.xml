@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="48dp">
+
+    <TextView
+        android:id="@+id/texto_conectar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/usuarios_titulo" />
+
+    <EditText
+        android:id="@+id/input_usuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:hint="@string/usuarios_nombre_user" />
+
+
+    <Button
+        android:id="@+id/bguardar"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:onClick="Guardar"
+        android:text="@string/usuarios_guardar" />
+
+    <Button
+        android:id="@+id/bcargar"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:onClick="Cargar"
+        android:text="@string/usuarios_cargar" />
+
+    <Button
+        android:id="@+id/bborrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="Borrar"
+        android:text="@string/usuarios_borrar" />
+
+    <Button
+        android:id="@+id/bcerrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="cerrarSesion"
+        android:text="@string/usuarios_cerrar" />
+
+
+</LinearLayout>
