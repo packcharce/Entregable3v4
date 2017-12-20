@@ -245,4 +245,9 @@ public class DetalleCarta extends AppCompatActivity {
     private void escribeMsg(String msg) {
         Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
     }
+
+    public void retroceder(View view) {
+        NavUtils.navigateUpFromSameTask(this);
+        finish();
+    }
 }

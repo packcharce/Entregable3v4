@@ -1,42 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.entregable3.cartitas_showcase.DetalleCarta">
-
-    <ImageView
-        android:id="@+id/imagenDetalle"
-        android:layout_width="300dp"
-        android:layout_height="400dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:contentDescription="@string/expositor_descrip_carta" />
-
-    <pl.droidsonroids.gif.GifImageView
-        android:id="@+id/gif"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/imagenDetalle"
-        android:layout_centerVertical="true" />
+    android:background="@drawable/fondo2"
+    android:orientation="vertical">
 
     <Button
-        android:id="@+id/botonDetalle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/imagenDetalle"
-        android:layout_below="@+id/imagenDetalle"
-        android:layout_marginTop="25dp"
-        android:text="@string/detalles_botonAvanzar" />
+        android:layout_width="95dp"
+        android:layout_height="55dp"
+        android:background="@drawable/izquierda"
+        android:onClick="retroceder" />
 
-    <Button
-        android:id="@+id/botonDetalleRetroceder"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/botonDetalle"
-        android:layout_alignBottom="@+id/botonDetalle"
-        android:layout_alignStart="@+id/imagenDetalle"
-        android:text="@string/detalles_botonRetro" />
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        tools:context="com.example.entregable3.cartitas_showcase.DetalleCarta">
+
+        <ImageView
+            android:id="@+id/imagenDetalle"
+            android:layout_width="300dp"
+            android:layout_height="400dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@string/expositor_descrip_carta" />
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/gif"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/imagenDetalle"
+            android:layout_centerVertical="true" />
+
+        <Button
+            android:id="@+id/botonDetalle"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/imagenDetalle"
+            android:layout_alignParentBottom="false"
+            android:layout_below="@+id/imagenDetalle"
+            android:background="@drawable/saltoderecha" />
+
+        <Button
+            android:id="@+id/botonDetalleRetroceder"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/imagenDetalle"
+            android:layout_below="@+id/imagenDetalle"
+            android:background="@drawable/saltoizq" />
 
 
+    </RelativeLayout>
 </RelativeLayout>

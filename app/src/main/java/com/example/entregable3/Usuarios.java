@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
@@ -161,5 +162,10 @@ public class Usuarios extends AppCompatActivity {
 
     private void escribeMsg(String msg) {
         Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
+    }
+
+    public void retroceder(View view) {
+        NavUtils.navigateUpFromSameTask(this);
+        finish();
     }
 }

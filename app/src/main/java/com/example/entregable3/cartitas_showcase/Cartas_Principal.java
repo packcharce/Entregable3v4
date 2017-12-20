@@ -85,4 +85,9 @@ public class Cartas_Principal extends AppCompatActivity {
         NavUtils.navigateUpFromSameTask(this);
         finish();
     }
+
+    public void retroceder(View view) {
+        NavUtils.navigateUpFromSameTask(this);
+        finish();
+    }
 }
