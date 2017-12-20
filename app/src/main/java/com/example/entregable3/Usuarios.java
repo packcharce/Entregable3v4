@@ -47,7 +47,7 @@ public class Usuarios extends AppCompatActivity {
                     out = new ObjectOutputStream(fos);
                     out.writeObject(player);
                     out.close();
-                    Toast.makeText(getApplicationContext(), String.format(getResources().getString(R.string.usuarios_nuevo), nombre), Toast.LENGTH_LONG).show();
+                    escribeMsg(String.format(getResources().getString(R.string.usuarios_nuevo), nombre));
                     SharedPreferences preferencias = getSharedPreferences(getResources().getString(R.string.clave_nombre_user_shared), Context.MODE_PRIVATE);
                     SharedPreferences.Editor editor = preferencias.edit();
                     editor.putString(getResources().getString(R.string.clave_active_user_shared), player.mostrarnombre());
@@ -58,15 +58,15 @@ public class Usuarios extends AppCompatActivity {
 
                 } catch (Exception e) {
 
-                    Toast.makeText(getApplicationContext(), getResources().getString(R.string.usuarios_nombre_invalido), Toast.LENGTH_LONG).show();
+                    escribeMsg(getResources().getString(R.string.usuarios_nombre_invalido));
                     e.printStackTrace();
                 }
             } else {
-                Toast.makeText(getApplicationContext(), getResources().getString(R.string.usuarios_nombre_repe), Toast.LENGTH_LONG).show();
+                escribeMsg(getResources().getString(R.string.usuarios_nombre_repe));
             }
 
         else
-            Toast.makeText(this, getResources().getString(R.string.usuarios_error_text_vacio), Toast.LENGTH_SHORT).show();
+            escribeMsg(getResources().getString(R.string.usuarios_error_text_vacio));
 
     }
 
@@ -108,7 +108,7 @@ public class Usuarios extends AppCompatActivity {
 
             }
         else
-            Toast.makeText(this, getResources().getString(R.string.usuarios_error_text_vacio), Toast.LENGTH_SHORT).show();
+            escribeMsg(getResources().getString(R.string.usuarios_error_text_vacio));
 
     }
 
@@ -120,7 +120,7 @@ public class Usuarios extends AppCompatActivity {
         if (!nombre.isEmpty())
             if (file.exists()) {
                 if (file.delete())
-                    Toast.makeText(getApplicationContext(), String.format(getResources().getString(R.string.usuarios_borrado), nombre), Toast.LENGTH_LONG).show();
+                    escribeMsg(String.format(getResources().getString(R.string.usuarios_borrado), nombre));
                 SharedPreferences preferencias = getSharedPreferences(getResources().getString(R.string.clave_nombre_user_shared), Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = preferencias.edit();
                 editor.putString(getResources().getString(R.string.clave_active_user_shared), getResources().getString(R.string.default_user));
@@ -129,10 +129,10 @@ public class Usuarios extends AppCompatActivity {
                 startActivity(intent);
                 finishAffinity();
             } else {
-                Toast.makeText(getApplicationContext(), getResources().getString(R.string.usuarios_no_existe), Toast.LENGTH_LONG).show();
+                escribeMsg(getResources().getString(R.string.usuarios_no_existe));
             }
         else
-            Toast.makeText(this, getResources().getString(R.string.usuarios_error_text_vacio), Toast.LENGTH_SHORT).show();
+            escribeMsg(getResources().getString(R.string.usuarios_error_text_vacio));
 
     }
 
@@ -151,10 +151,14 @@ public class Usuarios extends AppCompatActivity {
                 startActivity(intent);
                 finishAffinity();
             } else {
-                Toast.makeText(getApplicationContext(), getResources().getString(R.string.usuarios_no_existe), Toast.LENGTH_LONG).show();
+                escribeMsg(getResources().getString(R.string.usuarios_no_existe));
             }
         else
-            Toast.makeText(this, getResources().getString(R.string.usuarios_error_text_vacio), Toast.LENGTH_SHORT).show();
+            escribeMsg(getResources().getString(R.string.usuarios_error_text_vacio));
 
+    }
+
+    private void escribeMsg(String msg) {
+        Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
     }
 }

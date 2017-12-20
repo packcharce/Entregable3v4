@@ -43,6 +43,7 @@
 
     <!--  Detalles Cartas  -->
     <string name="detalles_titulo_intent">Detalle de Carta</string>
+    <string name="detalles_error_yaComprada">No mony fo bitches</string>
 
 
     <!--  Nombres Clave  -->

@@ -98,14 +98,14 @@ public class DetalleCarta extends AppCompatActivity {
                                     aux2.restaMonedas();
                                     guardaDatos();
                                 } else {
-                                    Toast.makeText(getApplicationContext(), "No mony fo bitches", Toast.LENGTH_SHORT).show();
+                                    escribeMsg(getResources().getString(R.string.detalles_error_yaComprada));
 
                                 }
                             }
                         });
                     }
                 } else {
-                    Toast.makeText(getApplicationContext(), "No mony fo bitches", Toast.LENGTH_SHORT).show();
+                    escribeMsg(getResources().getString(R.string.detalles_error_yaComprada));
                 }
             }
         });
@@ -200,5 +200,9 @@ public class DetalleCarta extends AppCompatActivity {
         guardaDatos();
         NavUtils.navigateUpFromSameTask(this);
         finish();
+    }
+
+    private void escribeMsg(String msg) {
+        Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
     }
 }
