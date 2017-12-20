@@ -31,9 +31,6 @@ public class Cartas_Principal extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.cartas_principal);
 
-        //Intent i= getIntent();
-        //aux = i.getParcelableExtra(getResources().getString(R.string.menu_objToCartas));
-
         cargaDatos();
 
         mostrMon = findViewById(R.id.mostradorMonedas);
@@ -73,7 +70,6 @@ public class Cartas_Principal extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        //guardaDatos();
         NavUtils.navigateUpFromSameTask(this);
         finish();
     }
