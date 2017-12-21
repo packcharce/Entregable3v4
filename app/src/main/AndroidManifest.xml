@@ -4,37 +4,51 @@
 
     <application
         android:allowBackup="true"
+        android:fullBackupContent="@xml/backup_descriptor"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        android:fullBackupContent="@xml/backup_descriptor">
-        <activity android:name=".MainActivity"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Usuarios"
+        <activity
+            android:name=".Usuarios"
             android:label="@string/usuarios_titulo_intent"
-            android:screenOrientation="portrait"
-            android:parentActivityName=".MainActivity" />
-        <activity android:name=".Jugar"
-            android:screenOrientation="portrait"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Jugar"
             android:label="@string/cartas_titulo_intent"
-            android:parentActivityName=".MainActivity" />
-        <activity android:name=".cartitas_showcase.Cartas_Principal"
+            android:parentActivityName=".MenuJuegos"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".cartitas_showcase.Cartas_Principal"
             android:label="@string/expositor_titulo_intent"
-            android:screenOrientation="portrait"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DadosGame"
+            android:label="@string/cartas_titulo_intent"
+            android:parentActivityName=".MenuJuegos"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".cartitas_showcase.DetalleCarta"
             android:label="@string/detalles_titulo_intent"
-            android:screenOrientation="portrait"
-            android:parentActivityName=".cartitas_showcase.Cartas_Principal" >
-        </activity>
+            android:parentActivityName=".cartitas_showcase.Cartas_Principal"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MenuJuegos"
+            android:label="@string/cartas_titulo_intent"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

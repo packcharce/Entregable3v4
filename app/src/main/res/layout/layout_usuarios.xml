@@ -39,8 +39,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
+            android:background="@drawable/buttonshape"
             android:onClick="Guardar"
-            android:text="@string/usuarios_guardar" />
+            android:text="@string/usuarios_guardar"
+            android:textColor="@android:color/background_light" />
 
         <Button
             android:id="@+id/bcargar"
@@ -48,22 +50,28 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
+            android:background="@drawable/buttonshape"
             android:onClick="Cargar"
-            android:text="@string/usuarios_cargar" />
+            android:text="@string/usuarios_cargar"
+            android:textColor="@android:color/background_light" />
 
         <Button
             android:id="@+id/bborrar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/buttonshape"
             android:onClick="Borrar"
-            android:text="@string/usuarios_borrar" />
+            android:text="@string/usuarios_borrar"
+            android:textColor="@android:color/background_light" />
 
         <Button
             android:id="@+id/bcerrar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/buttonshape"
             android:onClick="cerrarSesion"
-            android:text="@string/usuarios_cerrar" />
+            android:text="@string/usuarios_cerrar"
+            android:textColor="@android:color/background_light" />
 
 
     </LinearLayout>

@@ -45,8 +45,9 @@
         android:layout_width="25dp"
         android:layout_height="25dp"
         android:layout_alignBottom="@+id/tv2"
-        android:layout_marginStart="50dp"
-        android:layout_toEndOf="@+id/tv1"
+        android:layout_marginRight="15dp"
+        android:layout_toStartOf="@+id/tv2"
+        android:gravity="center_vertical"
         app:srcCompat="@drawable/caldero" />
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -60,11 +61,12 @@
 
         <Button
             android:id="@+id/boton_iniciar_sesion"
-            style="?android:attr/buttonStyleSmall"
             android:layout_width="match_parent"
             android:layout_height="60dp"
+            android:background="@drawable/buttonshape"
             android:onClick="Usuarios"
-            android:text="@string/menu_usuario" />
+            android:text="@string/menu_usuario"
+            android:textColor="@android:color/background_light" />
 
         <Button
             android:id="@+id/button"
@@ -72,23 +74,29 @@
             android:layout_height="60dp"
             android:layout_marginBottom="20dp"
             android:layout_marginTop="20dp"
+            android:background="@drawable/buttonshape"
             android:onClick="Jugar"
-            android:text="@string/menu_jugar" />
+            android:text="@string/menu_jugar"
+            android:textColor="@android:color/background_light" />
 
         <Button
             android:id="@+id/button2"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginBottom="20dp"
+            android:background="@drawable/buttonshape"
             android:onClick="Cartas"
-            android:text="@string/menu_cartas" />
+            android:text="@string/menu_cartas"
+            android:textColor="@android:color/background_light" />
 
         <Button
             android:id="@+id/button3"
             android:layout_width="match_parent"
             android:layout_height="60dp"
+            android:background="@drawable/buttonshape"
             android:onClick="Salir"
-            android:text="@string/menu_salir" />
+            android:text="@string/menu_salir"
+            android:textColor="@android:color/background_light" />
 
         <TextView
             android:id="@+id/texto_conectar"

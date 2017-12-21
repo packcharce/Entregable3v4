@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void Jugar(View view) {
         if (!usuario_activo.equals(getResources().getString(R.string.default_user))) {
-            Intent intent = new Intent(this, Jugar.class);
+            Intent intent = new Intent(this, MenuJuegos.class);
             startActivity(intent);
         } else
             makeText(getApplicationContext(), getResources().getString(R.string.alert_no_logeado), LENGTH_LONG).show();
