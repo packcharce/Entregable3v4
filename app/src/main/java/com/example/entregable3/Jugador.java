@@ -34,7 +34,7 @@ public class Jugador implements Serializable, Parcelable {
         }
     };
     private final String nombre; //Nombre del usuario
-    private final double precioCarta = 10.0;
+
     private double monedas;
     private transient Context myContext;
     // List que guarda las cartas
@@ -42,7 +42,7 @@ public class Jugador implements Serializable, Parcelable {
 
     Jugador(Context c, String nombre) {
         this.nombre = nombre;
-        this.monedas = 100.0;
+        this.monedas = 10.0;
         myContext = c;
         listaCarta = ejemploCartas(myContext);
     }
@@ -83,8 +83,8 @@ public class Jugador implements Serializable, Parcelable {
         return monedas;
     }
 
-    public void restaMonedas() {
-        monedas = monedas - precioCarta;
+    public void restaMonedas(Carta c) {
+        monedas = monedas - c.getPrecioCarta();
     }
 
 

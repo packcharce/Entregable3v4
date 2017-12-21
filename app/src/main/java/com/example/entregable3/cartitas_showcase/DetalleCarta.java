@@ -31,6 +31,7 @@ import pl.droidsonroids.gif.GifImageView;
 public class DetalleCarta extends AppCompatActivity {
     static String ARG_ID;
     static boolean direccionSwipe;
+    private final double precioCarta = 50.0;
     Carta c;
     int aux;
     ImageView img;
@@ -91,10 +92,10 @@ public class DetalleCarta extends AppCompatActivity {
      * pone soniditos pa las delicias del oyente
      */
     private void clickImagen() {
-        if (c.isBloqueada() && (int) aux2.mostrarmonedas() >= 10) {
+        if (c.isBloqueada() && (int) aux2.mostrarmonedas() >= c.getPrecioCarta()) {
             c.setBloqueada(false);
             img.setImageResource(c.getRecursoImagen());
-            aux2.restaMonedas();
+            aux2.restaMonedas(c);
             guardaDatos();
 
             if (c.getRecursoImagen() == R.drawable.casquetvolador) {
@@ -128,10 +129,10 @@ public class DetalleCarta extends AppCompatActivity {
                 img.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        if (c.isBloqueada() && (int) aux2.mostrarmonedas() >= 10) {
+                        if (c.isBloqueada() && (int) aux2.mostrarmonedas() >= c.getPrecioCarta()) {
                             c.setBloqueada(false);
                             img.setImageResource(c.getRecursoImagen());
-                            aux2.restaMonedas();
+                            aux2.restaMonedas(c);
                             guardaDatos();
                         } else {
                             escribeMsg(getResources().getString(R.string.detalles_error_yaComprada));

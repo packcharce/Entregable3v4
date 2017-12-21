@@ -125,7 +125,8 @@ public class MainActivity extends AppCompatActivity {
                 sonidoSalir.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                     @Override
                     public void onCompletion(MediaPlayer mediaPlayer) {
-                        MainActivity.this.finish();
+                        finish();
+
                     }
                 });
 

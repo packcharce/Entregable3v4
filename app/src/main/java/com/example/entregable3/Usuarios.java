@@ -1,7 +1,6 @@
 package com.example.entregable3;
 
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
@@ -25,7 +24,11 @@ public class Usuarios extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_usuarios);
-        getSupportActionBar().hide();
+        try {
+            getSupportActionBar().hide();
+        } catch (NullPointerException n) {
+            n.printStackTrace();
+        }
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         et1 = findViewById(R.id.input_usuario);
@@ -56,9 +59,10 @@ public class Usuarios extends AppCompatActivity {
                     SharedPreferences.Editor editor = preferencias.edit();
                     editor.putString(getResources().getString(R.string.clave_active_user_shared), player.mostrarnombre());
                     editor.apply();
-                    Intent intent = new Intent(this, MainActivity.class);
-                    startActivity(intent);
-                    finish(); //Esto se usa para cerrar esta activity y todos sus padres, asi no nos quedan actividades colgadas por ahí
+
+                    //Intent intent = new Intent(this, MainActivity.class);
+                    //startActivity(intent);
+                    retroceder(view); //Esto se usa para cerrar esta activity y todos sus padres, asi no nos quedan actividades colgadas por ahí
 
                 } catch (Exception e) {
 
@@ -98,9 +102,9 @@ public class Usuarios extends AppCompatActivity {
                     editor.putString(getResources().getString(R.string.clave_active_user_shared), aux.mostrarnombre());
                     editor.apply();
 
-                    Intent intent = new Intent(this, MainActivity.class);
-                    startActivity(intent);
-                    finish();
+                    //Intent intent = new Intent(this, MainActivity.class);
+                    //startActivity(intent);
+                    retroceder(view);
 
                 } catch (Exception e) {
                     toast1.show();
@@ -129,9 +133,10 @@ public class Usuarios extends AppCompatActivity {
                 SharedPreferences.Editor editor = preferencias.edit();
                 editor.putString(getResources().getString(R.string.clave_active_user_shared), getResources().getString(R.string.default_user));
                 editor.apply();
-                Intent intent = new Intent(this, MainActivity.class);
-                startActivity(intent);
-                finish();
+
+                //Intent intent = new Intent(this, MainActivity.class);
+                //startActivity(intent);
+                retroceder(view);
             } else {
                 escribeMsg(getResources().getString(R.string.usuarios_no_existe));
             }
@@ -152,9 +157,10 @@ public class Usuarios extends AppCompatActivity {
                 editor.putString(getResources().getString(R.string.clave_active_user_shared), getResources().getString(R.string.default_user));
                 editor.apply();
                 escribeMsg(getResources().getString(R.string.usuarios_cerrar_mensaje));
-                Intent intent = new Intent(this, MainActivity.class);
-                startActivity(intent);
-                finish();
+
+                //Intent intent = new Intent(this, MainActivity.class);
+                //startActivity(intent);
+                retroceder(view);
             } else {
                 escribeMsg(getResources().getString(R.string.usuarios_no_existe));
             }
@@ -169,6 +175,6 @@ public class Usuarios extends AppCompatActivity {
 
     public void retroceder(View view) {
         NavUtils.navigateUpFromSameTask(this);
-        finish();
+        finishAffinity();
     }
 }

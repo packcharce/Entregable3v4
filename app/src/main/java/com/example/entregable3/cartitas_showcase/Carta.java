@@ -13,6 +13,7 @@ import java.io.Serializable;
 public class Carta implements Serializable {
     private static short id = 0;
     final int recursoImagen;
+    private final double precioCarta = 50.0;
     private boolean bloqueada = true;
 
     public Carta(int recursoImagen) {
@@ -45,5 +46,9 @@ public class Carta implements Serializable {
         else
             res = recursoImagen;
         return res;
+    }
+
+    public double getPrecioCarta() {
+        return precioCarta;
     }
 }

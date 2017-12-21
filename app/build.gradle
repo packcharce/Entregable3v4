@@ -5,7 +5,7 @@ android {
     buildToolsVersion '27.0.2'
     defaultConfig {
         applicationId "com.example.entregable3"
-        minSdkVersion 14
+        minSdkVersion 16
         targetSdkVersion 27
         multiDexEnabled true
         versionCode 1

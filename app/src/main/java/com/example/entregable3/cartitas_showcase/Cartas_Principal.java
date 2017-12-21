@@ -38,6 +38,7 @@ public class Cartas_Principal extends AppCompatActivity {
 
         mostrMon = findViewById(R.id.mostradorMonedas);
 
+
         mostrMon.setText(String.format(getResources().getQuantityString(R.plurals.expositor_mostrador_monedas, (int) aux.mostrarmonedas()), aux.mostrarmonedas()));
         adc = new AdaptadorCartas(this, aux.getListaCarta());
         rv = findViewById(R.id.recyclerView);

@@ -14,9 +14,9 @@
     <string name="menu_alert_opcSi">Quit</string>
     <string name="usuarios_titulo">Enter your user</string>
     <string name="usuarios_nombre_user">Username</string>
-    <string name="usuarios_guardar">Save</string>
-    <string name="usuarios_cargar">Load</string>
-    <string name="usuarios_borrar">Delete</string>
+    <string name="usuarios_guardar">Create User</string>
+    <string name="usuarios_cargar">Login</string>
+    <string name="usuarios_borrar">Delete User</string>
     <string name="expositor_descrip_carta">Card preview</string>
     <string name="usuarios_titulo_intent">User Menu</string>
     <string name="expositor_titulo_intent">Cards showcase</string>
