@@ -12,6 +12,7 @@ import android.os.Parcelable;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.TextView;
 
 import com.example.entregable3.cartitas_showcase.Cartas_Principal;
@@ -36,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         TextView tv1 = findViewById(R.id.tv1);
         TextView tv2 = findViewById(R.id.tv2);
+        getSupportActionBar().hide();
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         SharedPreferences prefe = getSharedPreferences(getResources().getString(R.string.clave_nombre_user_shared), Context.MODE_PRIVATE); //Usamos el sharedpreferences para saber que usuario esta activo
         usuario_activo = prefe.getString(getResources().getString(R.string.clave_active_user_shared), getResources().getString(R.string.default_user));
