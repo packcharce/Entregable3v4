@@ -91,7 +91,7 @@ public class DetalleCarta extends AppCompatActivity {
      * pone soniditos pa las delicias del oyente
      */
     private void clickImagen() {
-        if (c.isBloqueada() && aux2.mostrarmonedas() >= 10) {
+        if (c.isBloqueada() && (int) aux2.mostrarmonedas() >= 10) {
             c.setBloqueada(false);
             img.setImageResource(c.getRecursoImagen());
             aux2.restaMonedas();
@@ -128,7 +128,7 @@ public class DetalleCarta extends AppCompatActivity {
                 img.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        if (c.isBloqueada() && aux2.mostrarmonedas() >= 10) {
+                        if (c.isBloqueada() && (int) aux2.mostrarmonedas() >= 10) {
                             c.setBloqueada(false);
                             img.setImageResource(c.getRecursoImagen());
                             aux2.restaMonedas();

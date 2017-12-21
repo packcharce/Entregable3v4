@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
                 ObjectInputStream in = new ObjectInputStream(fis);
                 aux = (Jugador) in.readObject();
                 in.close();
-                auxText = String.format(res.getString(R.string.menu_monedas), aux.mostrarmonedas());
+                auxText = String.format(res.getString(R.string.menu_monedas), (int) aux.mostrarmonedas());
                 tv2.setText(auxText);
 
 
@@ -65,8 +65,8 @@ public class MainActivity extends AppCompatActivity {
             }
 
         } else {
-            byte monedasDefault = 5;
-            auxText = String.format(res.getString(R.string.menu_monedas), monedasDefault);
+            double monedasDefault = 5.0;
+            auxText = String.format(res.getString(R.string.menu_monedas), (int) monedasDefault);
             tv2.setText(auxText);
         }
     }
@@ -79,9 +79,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void Jugar(View view) {
-
-        Intent intent = new Intent(this, Jugar.class);
-        startActivity(intent);
+        if (!usuario_activo.equals(getResources().getString(R.string.default_user))) {
+            Intent intent = new Intent(this, Jugar.class);
+            startActivity(intent);
+        } else
+            makeText(getApplicationContext(), getResources().getString(R.string.alert_no_logeado), LENGTH_LONG).show();
     }
 
     public void Cartas(View view) {

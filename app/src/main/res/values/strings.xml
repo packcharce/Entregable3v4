@@ -21,6 +21,7 @@
     <string name="usuarios_titulo_intent">Menu Usuarios</string>
     <string name="usuarios_titulo">Introduce tu usuario</string>
     <string name="usuarios_nombre_user">Nombre de usuario</string>
+
     <string name="usuarios_guardar">Crear Usuario </string>
     <string name="usuarios_cargar">Iniciar Sesion</string>
     <string name="usuarios_borrar">Borrar Usuario</string>
@@ -40,10 +41,12 @@
     <string name="expositor_titulo_intent">Expositor de Cartas</string>
     <string name="expositor_descrip_carta">Imagen previa de carta</string>
     <!-- <string name="expositor_mostrador_monedas">Te quedan %1$d monedas.</string> -->
+
     <plurals name="expositor_mostrador_monedas">
-        <item quantity="one">Te quedan %1$d moneda.</item>
-        <item quantity="other">Te quedan %1$d monedas.</item>
+        <item quantity="one">Te quedan %1$f moneda.</item>
+        <item quantity="other">Te quedan %1$.2f monedas.</item>
     </plurals>
+
 
     <!--  Detalles Cartas  -->
     <string name="detalles_titulo_intent">Detalle de Carta</string>

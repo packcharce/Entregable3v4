@@ -34,22 +34,22 @@ public class Jugador implements Serializable, Parcelable {
         }
     };
     private final String nombre; //Nombre del usuario
-    private final byte precioCarta = 10;
-    private int monedas;
+    private final double precioCarta = 10.0;
+    private double monedas;
     private transient Context myContext;
     // List que guarda las cartas
     private List<Carta> listaCarta;
 
     Jugador(Context c, String nombre) {
         this.nombre = nombre;
-        this.monedas = 100;
+        this.monedas = 100.0;
         myContext = c;
         listaCarta = ejemploCartas(myContext);
     }
 
     private Jugador(Parcel in) {
         nombre = in.readString();
-        monedas = in.readInt();
+        monedas = in.readDouble();
         listaCarta = new ArrayList<>();
         in.readList(listaCarta, null);
     }
@@ -79,7 +79,7 @@ public class Jugador implements Serializable, Parcelable {
         return nombre;
     }
 
-    public int mostrarmonedas() {
+    public double mostrarmonedas() {
         return monedas;
     }
 
@@ -102,8 +102,13 @@ public class Jugador implements Serializable, Parcelable {
     @Override
     public void writeToParcel(Parcel parcel, int i) {
         parcel.writeString(nombre);
-        parcel.writeInt(monedas);
+        parcel.writeDouble(monedas);
         parcel.writeList(listaCarta);
+    }
+
+    public void add_coin(double cantidad) {
+
+        monedas = monedas + cantidad;
     }
 }
 

@@ -58,7 +58,7 @@ public class Usuarios extends AppCompatActivity {
                     editor.apply();
                     Intent intent = new Intent(this, MainActivity.class);
                     startActivity(intent);
-                    finishAffinity(); //Esto se usa para cerrar esta activity y todos sus padres, asi no nos quedan actividades colgadas por ahí
+                    finish(); //Esto se usa para cerrar esta activity y todos sus padres, asi no nos quedan actividades colgadas por ahí
 
                 } catch (Exception e) {
 
@@ -100,7 +100,7 @@ public class Usuarios extends AppCompatActivity {
 
                     Intent intent = new Intent(this, MainActivity.class);
                     startActivity(intent);
-                    finishAffinity();
+                    finish();
 
                 } catch (Exception e) {
                     toast1.show();
@@ -131,7 +131,7 @@ public class Usuarios extends AppCompatActivity {
                 editor.apply();
                 Intent intent = new Intent(this, MainActivity.class);
                 startActivity(intent);
-                finishAffinity();
+                finish();
             } else {
                 escribeMsg(getResources().getString(R.string.usuarios_no_existe));
             }
@@ -154,7 +154,7 @@ public class Usuarios extends AppCompatActivity {
                 escribeMsg(getResources().getString(R.string.usuarios_cerrar_mensaje));
                 Intent intent = new Intent(this, MainActivity.class);
                 startActivity(intent);
-                finishAffinity();
+                finish();
             } else {
                 escribeMsg(getResources().getString(R.string.usuarios_no_existe));
             }
